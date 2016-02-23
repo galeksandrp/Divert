@@ -46,7 +46,7 @@ do
     COPTS="-shared -Wall -Wno-pointer-to-int-cast -O2 -Iinclude/ 
         -Wl,--enable-stdcall-fixup -Wl,--entry=${MANGLE}WinDivertDllEntry"
     CLIBS="-lgcc -lmsvcrt -lkernel32 -ladvapi32"
-    STRIP="$ENV-strip"
+    STRIP="strip"
     if [ -x "`which $CC`" ]
     then
         echo "\tmake install/MINGW/$CPU..."
